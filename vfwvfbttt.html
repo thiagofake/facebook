@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Inicia sesión o regístrate</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            max-width: 1000px;
+            gap: 50px;
+        }
+
+        /* Sección izquierda */
+        .left-section {
+            width: 50%;
+            text-align: left;
+            color: #1c1e21;
+        }
+
+        .left-section h1 {
+            color: #1877f2;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .left-section p {
+            font-size: 24px;
+            color: #606770;
+            margin: 10px 0 20px;
+        }
+
+        /* Sección derecha */
+        .login-card {
+            width: 360px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Inputs y botones del formulario */
+        .login-card input[type="email"],
+        .login-card input[type="password"] {
+            width: calc(100% - 24px); /* Ajuste para el padding */
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .login-card button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .login-card button:hover {
+            background-color: #166fe5;
+        }
+
+        .login-card a {
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .login-card .create-account {
+            background-color: #42b72a;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .login-card .create-account:hover {
+            background-color: #36a420;
+        }
+
+        /* Texto del pie de página */
+        .footer-text {
+            text-align: center;
+            font-size: 14px;
+            color: #606770;
+            margin-top: 20px;
+        }
+
+        .footer-text a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor completo */
+        .full-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-container">
+        <div class="container">
+            <!-- Sección izquierda con el logo y descripción -->
+            <div class="left-section">
+                <h1>facebook</h1>
+                <p>Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</p>
+            </div>
+
+            <!-- Sección derecha con el formulario de inicio de sesión -->
+            <div class="login-card">
+                <form onsubmit="redirectToVideo(event)">
+                    <input type="email" name="email" placeholder="Correo electrónico o número de teléfono" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar sesión</button>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <button type="button" class="create-account">Crear cuenta nueva</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-text">
+            <p>Crea una <a href="#">página</a> para una celebridad, una marca o un negocio.</p>
+        </div>
+    </div>
+
+    <script>
+        function redirectToVideo(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=8imXyAEMqobjujPh";
+        }
+    </script>
+</body>
+</html>
